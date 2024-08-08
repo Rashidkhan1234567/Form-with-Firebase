@@ -1,0 +1,43 @@
+// let users = []
+// let btn = document.querySelector(".submit")
+
+// btn.addEventListener("click", (e)=>{
+//   e.preventDefault()
+//   const email = document.querySelector("#email").value
+//   const password = document.querySelector("#password").value
+
+//   // Add validation here before creating the user
+//   createUserWithEmailAndPassword(auth, email, password)
+//  .then((userCredential) => {
+//    const user = userCredential.user;
+//     console.log(user);
+//     let add = [
+//       user.email,
+//       password,
+//       user.uid,
+//     ]
+//     users.push(add)
+//   })
+//  .catch((error) => {
+//    console.error(error.code)
+//    console.error(error.message)
+//   });
+//   console.log(users);
+
+// })
+
+// // let email = "Rashidkhan@gmail.com"
+// // let password = "@rashid(123)-+*"
+
+// // createUserWithEmailAndPassword(auth, email, password)
+// //   .then((userCredential) => {
+// //     const user = userCredential.user;
+// //     console.log(user);
+
+// //   })
+// //   .catch((error) => {
+// //     console.error(error.code)
+// //     console.error(error.message)
+// //   });
+
+// // console.log(auth);
