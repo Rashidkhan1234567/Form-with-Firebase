@@ -23,7 +23,7 @@ let signOut_btn = document.getElementById('signout')
 
 signOut_btn.addEventListener("click",() =>{
   signOut(auth).then(() => {
-window.location.href = "index.html"    
+window.location.href = "../index.html"    
   }).catch((error) => {
     console.error(error.code)
     console.error(error.message)
