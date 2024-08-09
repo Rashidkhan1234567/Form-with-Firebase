@@ -39,7 +39,7 @@ create_account.forEach((e) => {
   });
 });
 
-signUpFunction(signUp_btn, createUserWithEmailAndPassword, auth)
+signUpFunction(signUp_btn, createUserWithEmailAndPassword, auth, signIn,signUp)
 
 signInFunction(signIn_btn, signInWithEmailAndPassword, auth)
 

@@ -1,6 +1,6 @@
 export function signInFunction(signIn_btn, createUser, auth) {
   signIn_btn.addEventListener("click", (e) => {
-    //   e.preventDefault();
+      e.preventDefault();
     const names = document.querySelector("#name").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
@@ -38,7 +38,16 @@ export function signInFunction(signIn_btn, createUser, auth) {
         confirmButtonText: "Okay",
       });
       return;
-    } else {
+    }else  if (password.lenght < 6){
+      Swal.fire({
+        title: "Error!",
+        text: "Password must be at least 6 characters long!",
+        icon: "error",
+        confirmButtonText: "Okay",
+      });
+      return;
+    }
+     else {
       createUser(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -47,11 +56,11 @@ export function signInFunction(signIn_btn, createUser, auth) {
             text: "SignIn successfully!",
             icon: "success",
             confirmButtonText: "Okay",
-          })
-          setTimeout(()=>{
-
+          }).then((result) => {
+            if (result.isConfirmed) {
               window.location.href = "Dashboard.html"
-            },1500)
+            }
+          });
               document.querySelector("#name").value = "";
           document.querySelector("#email").value = "";
           document.querySelector("#password").value = "";
